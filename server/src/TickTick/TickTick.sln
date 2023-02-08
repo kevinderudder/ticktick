@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
@@ -23,3 +24,36 @@ Global
 		SolutionGuid = {2831D2E0-221A-420A-BD80-0130BA69F0F6}
 	EndGlobalSection
 EndGlobal
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TickTick.Models", "TickTick.Models\TickTick.Models.csproj", "{F855D553-525D-4620-9102-9812531D12D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TickTick.Api", "TickTick.Api\TickTick.Api.csproj", "{F85E52CA-24B7-4D25-8E20-6064E74C5D69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F855D553-525D-4620-9102-9812531D12D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F855D553-525D-4620-9102-9812531D12D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F855D553-525D-4620-9102-9812531D12D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F855D553-525D-4620-9102-9812531D12D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F85E52CA-24B7-4D25-8E20-6064E74C5D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F85E52CA-24B7-4D25-8E20-6064E74C5D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F85E52CA-24B7-4D25-8E20-6064E74C5D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F85E52CA-24B7-4D25-8E20-6064E74C5D69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CEE3985-7603-42E9-94FB-CC67332E5E23}
+	EndGlobalSection
+EndGlobal
+>>>>>>> Stashed changes
