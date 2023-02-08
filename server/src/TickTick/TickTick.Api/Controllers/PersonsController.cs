@@ -21,7 +21,7 @@ namespace TickTick.Api.Controllers
         {
             //TODO: Haal een persoon op
             Person person = new Person("Kevin", "DeRudder", "kevin.derudder@gmail.com");
-            return Ok(person);
+            return Ok(person.ConvertToDto());
         }
     }
 }
