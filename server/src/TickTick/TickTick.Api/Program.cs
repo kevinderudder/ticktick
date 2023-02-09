@@ -1,17 +1,47 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.OpenApi.Models;
 
-// Add services to the container.
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+        // Add services to the container.
 
-var app = builder.Build();
+        builder.Services.AddControllers();
+        builder.Services.AddSwaggerGen(config =>
+        {
+            config.SwaggerDoc(
+                "v1",
+                new OpenApiInfo
+                {
+                    Title = "TickTick your ticks and tickles",
+                    Version = "v1",
+                    Description = "lorem ipsim sit dolar amet",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Kevin DeRudder",
+                        Email = "kevin.derudder@gmail.com",
+                        Url = new Uri("https://chat.opeanai.com")
+                    }
+                });
+        });
 
-// Configure the HTTP request pipeline.
+        var app = builder.Build();
 
-app.UseHttpsRedirection();
+        // Configure the HTTP request pipeline.
 
-app.UseAuthorization();
+        app.UseHttpsRedirection();
+        if (app.Environment.IsDevelopment()) {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
 
-app.MapControllers();
 
-app.Run();
+        app.UseAuthorization();
+
+        app.MapControllers();
+
+        app.Run();
+    }
+}

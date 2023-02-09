@@ -14,6 +14,7 @@ namespace TickTick.Models.Dtos
         public string? MiddleName { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public string Email { get; set; }
-        
+       
+
     }
 }
