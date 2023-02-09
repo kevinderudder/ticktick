@@ -27,6 +27,15 @@ namespace TickTick.Models
             this.Email = email;
         }
 
+        public void Update(PersonDto dto)
+        {
+            this.FirstName = dto.FirstName;
+            this.LastName = dto.LastName;
+            this.MiddleName = dto.MiddleName;
+            this.DateOfBirth = dto.DateOfBirth;
+            this.Email = dto.Email;
+        }
+
         public void Delete() {
             this.IsDeleted = true;
         }
@@ -56,6 +65,11 @@ namespace TickTick.Models
                 DateOfBirth = this.DateOfBirth,
                 Email = this.Email
             };
+        }
+
+        public void CreatePublicId()
+        {
+            this.PublicId = Guid.NewGuid();
         }
     }
 }

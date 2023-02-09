@@ -1,4 +1,6 @@
 using Microsoft.OpenApi.Models;
+using TickTick.Api;
+using TickTick.Api.Services;
 
 internal class Program
 {
@@ -26,6 +28,12 @@ internal class Program
                     }
                 });
         });
+        builder.Services.AddApiVersioning(config => {
+            config.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+            config.AssumeDefaultVersionWhenUnspecified = true;
+        });
+
+        builder.Services.RegisterServices();
 
         var app = builder.Build();
 
@@ -36,7 +44,6 @@ internal class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
-
 
         app.UseAuthorization();
 
