@@ -36,8 +36,34 @@ namespace TickTick.Models
             this.Email = dto.Email;
         }
 
-        public void Delete() {
+        public void Delete()
+        {
             this.IsDeleted = true;
+        }
+
+        public void AddLocation(Location loc)
+        {
+            if (this.Addresses == null)
+            {
+                this.Addresses = new List<Location>();
+            }
+            this.Addresses.Add(loc);
+        }
+
+        public void RemoveLocation(Location loc)
+        {
+            if (this.Addresses != null)
+            {
+                this.Addresses.Remove(loc);
+            }
+        }
+
+        public void RemoveLocation(long id)
+        {
+            if (this.Addresses != null)
+            {
+                this.Addresses.Remove(this.Addresses.FirstOrDefault(l => l.Id == id));
+            }
         }
         
         public override string ToString()
@@ -51,13 +77,16 @@ namespace TickTick.Models
             {
                 return this.SocialSecurityNumber == other.SocialSecurityNumber;
             }
-            else {
+            else
+            {
                 return this.PublicId == other?.PublicId;
             }
         }
 
-        public PersonDto ConvertToDto() {
-            return new PersonDto() {
+        public PersonDto ConvertToDto()
+        {
+            return new PersonDto()
+            {
                 PublicId = this.PublicId,
                 FirstName = this.FirstName,
                 LastName = this.LastName,

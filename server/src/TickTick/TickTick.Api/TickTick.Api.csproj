@@ -15,4 +15,8 @@
     <ProjectReference Include="..\TickTick.Models\TickTick.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\Locations\" />
+  </ItemGroup>
+
 </Project>

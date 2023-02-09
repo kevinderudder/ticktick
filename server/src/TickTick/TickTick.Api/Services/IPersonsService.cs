@@ -7,5 +7,6 @@ namespace TickTick.Api.Services
     {
         void DeletePerson(Guid id);
         PersonDto AddPerson(AddPersonDto dto);
+        PersonDto UpdatePerson(Guid personId, PersonDto dto);
     }
 }

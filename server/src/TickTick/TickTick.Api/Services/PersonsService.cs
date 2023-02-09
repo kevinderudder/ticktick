@@ -25,5 +25,15 @@ namespace TickTick.Api.Services
             return person.ConvertToDto();
             
         }
+        
+        public PersonDto UpdatePerson(Guid personId, PersonDto dto) {
+            //TODO: use a person from the database
+            Person person = new Person(
+                dto.FirstName,
+                dto.LastName,
+                dto.Email);
+            person.Update(dto);
+            return person.ConvertToDto();
+        }
     }
 }
