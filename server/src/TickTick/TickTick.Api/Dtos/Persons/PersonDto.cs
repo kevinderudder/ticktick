@@ -14,7 +14,21 @@ namespace TickTick.Models.Dtos
         public string? MiddleName { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public string Email { get; set; }
-       
+    }
 
+    public static class PersonExtensions
+    {
+        public static PersonDto ConvertToDto(this Person person)
+        {
+            return new PersonDto()
+            {
+                PublicId = person.PublicId,
+                FirstName = person.FirstName,
+                LastName = person.LastName,
+                MiddleName = person.MiddleName,
+                DateOfBirth = person.DateOfBirth,
+                Email = person.Email
+            };
+        }
     }
 }

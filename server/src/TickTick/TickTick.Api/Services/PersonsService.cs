@@ -32,7 +32,7 @@ namespace TickTick.Api.Services
                 dto.FirstName,
                 dto.LastName,
                 dto.Email);
-            person.Update(dto);
+            person.Update(dto.FirstName, dto.LastName, dto.MiddleName, dto.DateOfBirth, dto.Email);
             return person.ConvertToDto();
         }
     }
